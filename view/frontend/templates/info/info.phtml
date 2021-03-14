@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var \Omie\Payment\Boleto\Info\Info $block
+ * @var \Magento\Framework\Escaper $escaper
+ */
+?>
+<dl class="payment-method">
+    <dt class="title"><?= $escaper->escapeHtml($block->getMethod()->getTitle()) ?></dt>
+    <?php if ($block->getInstructions()) : ?>
+        <dd class="content"><?= /* @noEscape */ nl2br($escaper->escapeHtml($block->getInstructions())) ?></dd>
+    <?php endif; ?>
+    <dt class="title"><strong><?= __($block->getInstallmentQuantity() === 1 ? 'Payment' : 'Installment') ?></strong></dt>
+    <dd class="content">
+        <?php if ($block->getInstallmentQuantity() === 1): ?>
+            <?= __('In cash') ?>
+        <?php else: ?>
+            <?= $block->getInstallmentQuantity() ?> <?= __('times of') ?> <?= $block->getFormatedPrice($block->getInstallmentAmount()) ?>
+        <?php endif; ?>
+    </dd>
+</dl>

@@ -1,0 +1,7 @@
+<?php
+/** @var Omie\Payment\Boleto\Block\Checkout\Success\Additional $block */
+/** @var Magento\Framework\Escaper $escaper */
+?>
+<p>
+    <?= /* @noEscape */ $escaper->escapeHtml($this->getInstructions()) ?>
+</p>

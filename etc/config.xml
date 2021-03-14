@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <payment>
+            <omie_boleto>
+                <model>Omie\Payment\Boleto\Model\Method\Boleto</model>
+                <active>1</active>
+                <title>Boleto Bancário</title>
+                <payment_action>order</payment_action>
+                <order_status>pending</order_status>
+                <sort_order>10</sort_order>
+                <instructions>O boleto será enviado para o seu e-mail no final do ciclo de compras.</instructions>
+                <expiration_days>5</expiration_days>
+                <min_order_total>0</min_order_total>
+                <maximum_installment_quantity>10</maximum_installment_quantity>
+                <maximum_installment_quantity_physical_person>1</maximum_installment_quantity_physical_person>
+                <minimum_installment_value>30</minimum_installment_value>
+                <group>omie</group>
+            </omie_boleto>
+        </payment>
+        <installments>
+            <payment_methods>
+                <omie_boleto>
+                    <installments_helper>Omie\Payment\Boleto\Helper\InstallmentsCalculator</installments_helper>
+                </omie_boleto>
+            </payment_methods>
+        </installments>
+    </default>
+</config>

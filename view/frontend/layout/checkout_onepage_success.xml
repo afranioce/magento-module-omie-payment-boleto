@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<body>
+    <referenceContainer name="order.success.additional.info">
+        <block class="Omie\Payment\Boleto\Block\Checkout\Success\Additional" name="details.order.success" template="Omie_PaymentBoleto::success/additional.phtml" after="-" />
+    </referenceContainer>
+</body>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="omie_boleto" translate="label" type="text" sortOrder="710" showInDefault="1" showInWebsite="1" canRestore="1">
+                <label>Omie Boleto</label>
+                <field id="active" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Title</label>
+                </field>
+                <field id="sort_order" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Sort Order</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+                <field id="instructions" translate="label" type="textarea" sortOrder="62" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Instructions</label>
+                </field>
+                <field id="expiration_days" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Expiration days</label>
+                    <frontend_class>validate-number</frontend_class>
+                    <comment>Due date of the boleto after purchase. Example 5 days after purchase.</comment>
+                </field>
+                <field id="maximum_installment_quantity" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Maximum Installment Quantity</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+                <field id="maximum_installment_quantity_physical_person" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Maximum Installment Quantity for Physical Person</label>
+                    <frontend_class>validate-number</frontend_class>
+                </field>
+                <field id="minimum_installment_value" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Minimum Installment Value</label>
+                    <frontend_class>validate-decimal</frontend_class>
+                </field>
+                <field id="interest_rate" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Monthly Interest Rate</label>
+                    <frontend_class>validate-decimal</frontend_class>
+                    <comment>Must be a percentage value using point as a decimal separator. Example: 1.99% should be set as 1.99</comment>
+                </field>
+                <field id="min_order_total" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Minimum Order Total</label>
+                    <comment>Orders with smaller totals won't be placed with this payment method</comment>
+                </field>
+                <field id="max_order_total" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Maximum Order Total</label>
+                    <comment>Leave empty to disable limit</comment>
+                </field>
+                <field id="allowspecific" translate="label" type="allowspecific" sortOrder="100" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="110" showInDefault="1" showInWebsite="1" canRestore="1">
+                    <label>Payment from Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
