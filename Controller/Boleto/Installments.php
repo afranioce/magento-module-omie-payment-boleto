@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Omie\Payment\Boleto\Controller\Payment;
+namespace Omie\Payment\Boleto\Controller\Boleto;
 
 use Magento\Checkout\Model\Session as CheckoutSession;
 use Magento\Framework\App\Action\HttpGetActionInterface;

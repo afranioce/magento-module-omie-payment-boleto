@@ -94,7 +94,7 @@ define(
                 var self = this;
 
                 $.ajax({
-                    url: url.build('omie/payment/installments'),
+                    url: url.build('omie/boleto/installments'),
                     dataType: 'json',
                     success: function(installments) {
                         for (var i in installments) {
