@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e25ddfaa55cff7218f2091169489d3d",
+    "content-hash": "7b7a2def59d4bf403cea806b2be59734",
     "packages": [
         {
             "name": "afranio/magento-module-omie",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/afranioce/magento-module-omie.git",
-                "reference": "190aeb083a19164a60cfe84055a16495796b18bd"
+                "reference": "56ceafa661387c1b60dd2cbeb0f007597846a6f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/afranioce/magento-module-omie/zipball/190aeb083a19164a60cfe84055a16495796b18bd",
-                "reference": "190aeb083a19164a60cfe84055a16495796b18bd",
+                "url": "https://api.github.com/repos/afranioce/magento-module-omie/zipball/56ceafa661387c1b60dd2cbeb0f007597846a6f4",
+                "reference": "56ceafa661387c1b60dd2cbeb0f007597846a6f4",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +70,7 @@
                 "source": "https://github.com/afranioce/magento-module-omie/tree/main",
                 "issues": "https://github.com/afranioce/magento-module-omie/issues"
             },
-            "time": "2021-03-14T18:39:27+00:00"
+            "time": "2021-04-11T03:43:38+00:00"
         },
         {
             "name": "afranio/omie-sdk",
