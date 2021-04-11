@@ -35,8 +35,8 @@ class ConfigProvider implements ConfigProviderInterface
         return $this->method->isAvailable() ? [
             'payment' => [
                 self::CODE => [
-                    'isActive' => (bool) $this->dataHelper->getPaymentConfig('active'),
-                    'title' => $this->escaper->escapeHtml($this->dataHelper->getPaymentConfig('title')),
+                    'isActive' => (bool) $this->dataHelper->isActive(),
+                    'title' => $this->escaper->escapeHtml($this->dataHelper->getTitle()),
                 ],
             ],
         ] : [];

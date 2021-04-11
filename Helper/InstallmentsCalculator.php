@@ -73,12 +73,12 @@ class InstallmentsCalculator extends AbstractHelper implements InstallmentsCalcu
 
     private function getInterestRate(): float
     {
-        return (1 + ((float) $this->dataHelper->getPaymentConfig('interest_rate') / 100));
+        return (1 + ((float) $this->dataHelper->getInterestRate() / 100));
     }
 
     private function getMinimumInstallmentAmount(): float
     {
-        return (float) $this->dataHelper->getPaymentConfig('minimum_installment_value');
+        return (float) $this->dataHelper->getMinimumInstallmentValue();
     }
 
     private function getMaximumInstallmentQuantity(): int
@@ -90,10 +90,10 @@ class InstallmentsCalculator extends AbstractHelper implements InstallmentsCalcu
             $cpf = $customer->getCustomAttribute('cpf');
 
             if ($cpf) {
-                return (int) $this->dataHelper->getPaymentConfig('maximum_installment_quantity_physical_person');
+                return $this->dataHelper->getMaximunInstallmentQuantityPhysicalPerson();
             }
         }
 
-        return (int) $this->dataHelper->getPaymentConfig('maximum_installment_quantity');
+        return $this->dataHelper->getMaximumInstallmentQuantity();
     }
 }
